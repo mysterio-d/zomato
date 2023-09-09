@@ -1,0 +1,201 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-left: 100px;
+    margin-top: 250px;
+    
+}
+
+.card {
+  width: calc(20% - 10px); 
+    flex-shrink: 0;
+}
+
+.card .crd img {
+    width: 70%;
+    height: 140px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.card .crd h3 {
+    text-align: center;
+    margin-right: 90px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+ 
+.navbar {
+  background-image: url('https://b.zmtcdn.com/mx-onboarding-hero87f77501659a5656cad54d98e72bf0d81627911821.webp');
+  height: 380px; 
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  
+ 
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  margin-left: 450px; 
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 40px;
+  margin-top: 20px; 
+}
+
+
+
+.nav-links li a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(21, 127, 208);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+
+.nav-links li a.button:hover {
+  background-color: #113b6f; 
+}
+
+.nav-links a img {
+  width: 20%;
+  margin-top: 20px;
+  margin-right: 200px;
+}
+.heading {
+  color: white;
+  margin-left: 430px;
+  font-size: 38px;
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.heading p {
+  margin-top: 5px;
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+ .footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+  padding: 10px;
+  font-family: 'Mukta',sans-serif;
+  position: fixed;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.list {
+  margin-right: 40px;
+}
+
+.list:last-child {
+  margin-right: 0;
+}
+
+.list h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list p {
+  font-size: 14px;
+  margin: 14px 0;
+  opacity: 0.5;
+}
+
+.footer img {
+  width: 140px;
+}
+
+
+
+.white-space img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 500px; 
+  height: 270px;
+  margin-top: 270px;
+  margin-left: 485px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-image: url('https://moz.com/images/cms/top500-background-pattern.png?q=95&auto=format&fit=crop&dm=1633451445&s=b6ca48b616fad8da3e23784e549bc3d2');
+  padding: 30px;
+  font-family: 'Mukta',sans-serif;
+ 
+  margin-top: 50px;
+  letter-spacing: 1px;
+  position: relative;
+ 
+width: 100%;
+  
+}
+
+.list {
+  margin-right: 40px;
+}
+
+.list:last-child {
+  margin-right: 0;
+}
+
+.list h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  
+}
+
+.list p {
+  font-size: 14px;
+  margin: 14px 0;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.footer img {
+  width: 140px;
+}

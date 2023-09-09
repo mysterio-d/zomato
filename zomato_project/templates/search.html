@@ -1,0 +1,77 @@
+{% load static%}
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="{% static '/css/cuisine.css' %}">
+    <head>
+        
+        
+    </head>
+    <body>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      
+      
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+
+      <nav class="navbar">
+
+        <div class="pic1">
+          <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png">
+        </div>
+        
+       
+        <ul class="nav-links">
+          
+          <li><a href="{% url 'login' %}">Login</a></li>
+          
+          <li><a href="{% url 'signup' %}">signup</a></li>
+        </ul>
+      </nav>
+      <hr>
+
+
+      <div class="top-image">
+        <a href="https://www.zomato.com/manila/sauce/upgrading-zomato-gold-zomato-pro--e2252e9a-c1b8-11ea-b727-9241955ec3a5"> 
+        <img src="https://www.zomato.com/blog/wp-content/uploads/2017/11/Merchant-Gold-Social-Post.jpg" >
+      </a>
+      </div>
+
+
+      <div class="centered-heading">
+        <div class="line-container">
+            <hr class="line">
+            <h1>WHAT'S ON YOUR MIND</h1>
+        </div>
+    </div>
+    
+
+
+
+    <div class="card-container">
+        {% for category in categories %}
+        <div class="card">
+            <div class="crd">
+                
+                <img src="{{ category.image.url }}" alt="Category Image">
+                <h3>{{ category.name }}</h3>
+            </div>
+        </div>
+        {% endfor %}
+        
+       
+
+       
+
+
+    
+    
+    
+
+        
+    </body>
+
+    
+</html>
+

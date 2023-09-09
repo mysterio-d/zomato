@@ -1,0 +1,75 @@
+{% load static%}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>signup</title>
+        
+        <link rel="stylesheet" href="{% static '/css/signup.css' %}">
+    </head>
+    <body>
+        
+        <div class="container">
+            <h2>Create a Zomato Account</h2>
+            <form method="post">
+              {% csrf_token %}
+                <label for="name">Username</label>
+                <input type="text" placeholder="Enter your full name" name="name" required>
+            
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" placeholder="Choose a password" name="password" required>
+            
+                <button type="submit">Sign Up</button>
+            </form><br>
+            
+           
+        </div>
+
+        
+
+
+        <footer>
+            <div class="footer">
+              <div class="list">
+                <h2>About Zomato</h2>
+                <p>Who We Are</p>
+                <p>Blog</p>
+                <p>Work With Us</p>
+                <p>Investor Relations</p>
+                <p>Report Fraud</p>
+              </div>
+          
+              <div class="list">
+                <h2>Zomaverse</h2>
+                <p>Zomato</p>
+                <p>Blinkit</p>
+                <p>feeding india</p>
+                <p>Zomaland</p>
+              </div>
+          
+              <div class="list">
+                <h2>Learn More</h2>
+                <p>Privacy</p>
+                <p>Security</p>
+                <p>Terms</p>
+                <p>Site Map</p>
+                
+              </div>
+          
+              <div class="list">
+                <h2>For Restaurants</h2>
+                <p>Partner With Us</p>
+                <p>Apps for You</p>
+               
+                <img src="https://beconnected.esafety.gov.au/pluginfile.php/69240/mod_resource/content/1/t26_c5_a1_p3.png">
+              </div>
+            </div>
+          </footer>
+
+        
+    </body>
+</html>

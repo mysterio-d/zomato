@@ -1,0 +1,118 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="{% static '/css/carts.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    
+</head>
+<body>
+   
+
+    <div class="image">
+        <img src="http://www.pngmart.com/files/7/Delivery-PNG-Pic.png">
+      </div>
+        
+    <div class="top"> 
+        
+            <h1>&#9200; Delivery in 25 - 30 min</h1>
+        
+        
+    </div>
+
+    <div class="centered-heading">
+        <div class="line-container">
+            <hr class="line">
+            <h1>ITEM(s) ADDED</h1>
+        </div>
+    </div>
+<div class="items"> 
+    
+        <p> {{ name }}</p>
+        <button>
+            {{ quantity }}
+        </button>
+        <h2><i class="fa fa-inr"  aria-hidden="true"></i> {{ first_price }}</h2>
+        
+</div>
+
+<div class="centered-heading1">
+    <div class="line-container">
+        <hr class="line">
+        <h1>BILL SUMMARY</h1>
+    </div>
+</div>
+
+
+    <div class="items1"> 
+        <div class="subtotal">
+        <p><i class="fa fa-circle" aria-hidden="true"></i> Sub total</p>
+        <h2><i class="fa fa-inr" aria-hidden="true"></i> {{ first_price }}</h2>
+    </div>
+
+    <div class="delivery"> 
+        
+        <p><i class="fa fa-motorcycle" aria-hidden="true"></i> Delivery charge</p>
+        <h2><i class="fa fa-inr" aria-hidden="true"></i> 54.0</h2>
+    </div>
+
+    <hr class="delivery-line">
+
+    <div class="total"> 
+        
+        <p><i class="fa fa-credit-card" aria-hidden="true"></i> Grand Total</p>
+        <h2><i class="fa fa-inr" aria-hidden="true"></i>{{ total_price }}</h2>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="payment-container">
+    <div class="payment-card">
+        <div class="payment-header">
+            <h2>Payment Details</h2>
+        </div>
+        <form method="post" action="{% url 'cart' cate_slug=category_slug food_slug=food_slug %}">
+    {% csrf_token %}
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+
+            </div>
+            <div class="form-group">
+                <label>Payment Method</label>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment-method" value="cod" checked>
+                        COD
+                    </label>
+                    <label class="payment-option">
+                        
+                       
+                        <input type="radio" name="payment-method" value="gpay">
+                       
+                        <img src="https://1000logos.net/wp-content/uploads/2023/03/Google-Pay-logo-1536x864.png" alt="Google Pay Logo" class="payment-logo">
+                        
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="total-box">
+                        <p class="total-price">Rs.{{ total_price }}</p>
+                </div>
+                <button type="submit" class="pay-btn">Pay Now</button>
+        </form>
+    </div>
+</div>
+
+
+
+

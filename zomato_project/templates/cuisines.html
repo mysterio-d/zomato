@@ -1,0 +1,128 @@
+{% load static%}
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="{% static '/css/cuisine.css' %}">
+    <head>
+        
+        
+    </head>
+    <body>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      
+      
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+
+      <nav class="navbar">
+
+        <div class="pic1">
+          <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png">
+        </div>
+        
+       
+        <ul class="nav-links">
+          
+          <li><a href="{% url 'login' %}">Login</a></li>
+          
+          <li><a href="{% url 'signup' %}">signup</a></li>
+        </ul>
+      </nav>
+      <hr>
+
+
+      <div class="top-image">
+        <a href="https://www.zomato.com/manila/sauce/upgrading-zomato-gold-zomato-pro--e2252e9a-c1b8-11ea-b727-9241955ec3a5"> 
+        <img src="https://www.marketingmind.in/wp-content/uploads/2019/08/Merchant-Gold-Social-Post.jpg" >
+      </a>
+      </div>
+
+
+      <div class="centered-heading">
+        <div class="line-container">
+            <hr class="line">
+            <h1>WHAT'S ON YOUR MIND</h1>
+        </div>
+    </div>
+    
+
+
+
+      <div class="card-container">
+        {% for item in category %}
+        <div class="card">
+            <div class="crd">
+                <a href="{% url 'food' item.slug %}">
+                    <img src="{{ item.image.url }}">
+                </a>
+                <h3>{{ item.name }}</h3>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+
+    <div class="footer-heading">
+      <div class="line-contain">
+          <hr class="line">
+          <h1>Over 500+ Restaurants</h1>
+      </div>
+  </div>
+
+
+
+
+    
+    
+
+    <footer>
+        <div class="footer">
+          <div class="list">
+            <h2>About Zomato</h2>
+            <p>Who We Are</p>
+            <p>Blog</p>
+            <p>Work With Us</p>
+            <p>Investor Relations</p>
+            <p>Report Fraud</p>
+          </div>
+      
+          <div class="list">
+            <h2>Zomaverse</h2>
+            <p>Zomato</p>
+            <p>Blinkit</p>
+            <p>feeding india</p>
+            <p>Zomaland</p>
+          </div>
+      
+          <div class="list">
+            <h2>Learn More</h2>
+            <p>Privacy</p>
+            <p>Security</p>
+            <p>Terms</p>
+            <p>Site Map</p>
+            
+          </div>
+      
+          <div class="list">
+            <h2>For Restaurants</h2>
+            <p>Partner With Us</p>
+            <p>Apps for You</p>
+           
+            <img src="https://beconnected.esafety.gov.au/pluginfile.php/69240/mod_resource/content/1/t26_c5_a1_p3.png">
+          </div>
+        </div>
+      </footer>
+        
+
+
+
+    
+    
+    
+    
+    
+
+        
+    </body>
+</html>

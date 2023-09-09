@@ -1,0 +1,105 @@
+{% load static%}
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="{% static '/css/foods.css' %}">
+    <head>
+        
+        
+    </head>
+    <body>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+      <div class="white-space">
+        <!-- Add images here -->
+        <img src="https://offercdn.paytm.com/blog/2019/11/zomato-4pe400-app-bnr.jpg" alt="Image 1">
+       
+      </div>
+      <nav class="navbar">
+
+       
+        
+        
+        <ul class="nav-links">
+          <a href="{% url 'main' %}">
+            <img src="https://b.zmtcdn.com/web/merchant/advertize/3d432595dac7d2bda0b4cc41f6afe6ef1564646824.png" alt="">
+          </a>
+          <li><a href="{% url 'login' %}" class="button">Login</a></li>
+          <li><a href="{% url 'signup' %}" class="button">Signup</a></li>
+          
+        </ul>
+
+
+        <div class="heading">
+
+          <h1>Welcome to zomato</h1>
+          <p>Get up to 50% Off on ur first order!</p>
+        </div>
+  
+       
+      </nav>
+       
+      
+      
+
+
+
+
+    
+
+
+            <div class="card-container">
+              {% for item in foods %}
+              <div class="card">
+                  <div class="crd">
+                    <a href="{% url 'foodview' item.category.slug item.slug %}">
+                          <img src="{{ item.food_image.url }}">
+                      </a>
+                      <h3>{{ item.name }}</h3>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+       
+          
+          <footer>
+            <div class="footer">
+              <div class="list">
+                <h2>About Zomato</h2>
+                <p>Who We Are</p>
+                <p>Blog</p>
+                <p>Work With Us</p>
+                <p>Investor Relations</p>
+                <p>Report Fraud</p>
+              </div>
+          
+              <div class="list">
+                <h2>Zomaverse</h2>
+                <p>Zomato</p>
+                <p>Blinkit</p>
+                <p>feeding india</p>
+                <p>Zomaland</p>
+              </div>
+          
+              <div class="list">
+                <h2>Learn More</h2>
+                <p>Privacy</p>
+                <p>Security</p>
+                <p>Terms</p>
+                <p>Site Map</p>
+                
+              </div>
+          
+              <div class="list">
+                <h2>For Restaurants</h2>
+                <p>Partner With Us</p>
+                <p>Apps for You</p>
+               
+                <img src="https://beconnected.esafety.gov.au/pluginfile.php/69240/mod_resource/content/1/t26_c5_a1_p3.png">
+              </div>
+            </div>
+          </footer>
+            
